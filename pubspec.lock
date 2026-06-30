@@ -838,7 +838,7 @@ packages:
     source: hosted
     version: "3.0.3"
   widgetbook:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: widgetbook
       sha256: "88b10102d294d0bec64ca294c81f15b1a620ce66df950067ff8f89274f1c95e8"
