@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:skai_data_mobile/core/extensions/context_extension.dart';
-import 'package:skai_data_mobile/core/theme/app_colors.dart';
+import 'package:skai_widgetbook/core/extensions/context_extension.dart';
+import 'package:skai_widgetbook/core/theme/app_colors.dart';
 import 'dart:math' as math;
 import 'dart:ui';
 
-import 'package:skai_data_mobile/feature/common/presentation/widget/radial_progress_painter.dart';
+import 'package:skai_widgetbook/feature/common/widget/radial_progress_painter.dart';
 
 class AppRadialProgressChart extends StatelessWidget {
   final double progress;

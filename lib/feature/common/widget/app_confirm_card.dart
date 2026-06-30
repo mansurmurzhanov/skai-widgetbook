@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:skai_data_mobile/core/extensions/context_extension.dart';
-import 'package:skai_data_mobile/core/theme/app_colors.dart';
-import 'package:skai_data_mobile/core/theme/app_spacing.dart';
-import 'package:skai_data_mobile/feature/common/presentation/widget/app_button.dart';
-import 'package:skai_data_mobile/feature/common/presentation/widget/app_card.dart';
+import 'package:skai_widgetbook/core/extensions/context_extension.dart';
+import 'package:skai_widgetbook/core/theme/app_colors.dart';
+import 'package:skai_widgetbook/core/theme/app_spacing.dart';
+import 'package:skai_widgetbook/feature/common/widget/app_button.dart';
+import 'package:skai_widgetbook/feature/common/widget/app_card.dart';
 
 class AppConfirmSheet extends StatelessWidget {
   final String? title;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:skai_data_mobile/core/theme/progress_bar_colors.dart';
-import 'package:skai_data_mobile/l10n/generated/l10n.dart';
+import 'package:skai_widgetbook/core/theme/progress_bar_colors.dart';
+import 'package:skai_widgetbook/l10n/generated/l10n.dart';
 
 class AppIcons {
   final BuildContext context;

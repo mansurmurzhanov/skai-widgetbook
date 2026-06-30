@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:skai_data_mobile/core/extensions/context_extension.dart';
-import 'package:skai_data_mobile/core/theme/app_colors.dart';
-import 'package:skai_data_mobile/feature/ceo/presentation/widget/ceo_filter_type_panel.dart';
-import 'package:skai_data_mobile/feature/common/presentation/widget/app_glass_card.dart';
+import 'package:skai_widgetbook/core/extensions/context_extension.dart';
+import 'package:skai_widgetbook/core/theme/app_colors.dart';
+import 'package:skai_widgetbook/feature/ceo/presentation/widget/ceo_filter_type_panel.dart';
+import 'package:skai_widgetbook/feature/common/widget/app_glass_card.dart';
 
 class AppTypeDropDown<T> extends StatefulWidget {
   final T? value;

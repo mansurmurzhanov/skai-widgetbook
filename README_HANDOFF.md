@@ -37,7 +37,7 @@ dev_dependencies:
 
 ## Известные места, где нужен «стаб» (это часть задачи, не баг)
 
-1. **l10n / `context.l10n`** — `context_extension.dart` импортирует `package:skai_data_mobile/l10n/generated/l10n.dart`,
+1. **l10n / `context.l10n`** — `context_extension.dart` импортирует `package:skai_widgetbook/l10n/generated/l10n.dart`,
    которого тут НЕТ (это сгенерённые корп-строки). Варианты:
    - проще всего: в каталоге замени вызовы `context.l10n.xxx` на обычные строки-плейсхолдеры
      («Заголовок», «Применить» и т.п.) — для витрины этого достаточно;

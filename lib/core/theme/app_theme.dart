@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:skai_data_mobile/core/theme/progress_bar_colors.dart';
+import 'package:skai_widgetbook/core/theme/progress_bar_colors.dart';
 
 import 'app_colors.dart';
 import 'app_typography.dart';

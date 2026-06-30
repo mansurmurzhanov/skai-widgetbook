@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skai_data_mobile/feature/common/presentation/widget/app_text_field.dart';
+import 'package:skai_widgetbook/feature/common/widget/app_text_field.dart';
 
 class AppSwitcherWidget extends StatefulWidget {
   final String? label;

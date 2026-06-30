@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skai_data_mobile/core/theme/app_spacing.dart';
+import 'package:skai_widgetbook/core/theme/app_spacing.dart';
 
 class AppCard extends StatelessWidget {
   final Color? backgroundColor;

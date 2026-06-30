@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:skai_data_mobile/core/extensions/context_extension.dart';
-import 'package:skai_data_mobile/core/theme/app_spacing.dart';
+import 'package:skai_widgetbook/core/extensions/context_extension.dart';
+import 'package:skai_widgetbook/core/theme/app_spacing.dart';
 import 'app_button.dart';
 
 class AppErrorWidget extends StatelessWidget {

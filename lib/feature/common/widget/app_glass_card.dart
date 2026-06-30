@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
-import 'package:skai_data_mobile/core/theme/app_colors.dart';
+import 'package:skai_widgetbook/core/theme/app_colors.dart';
 
 class AppGlassCard extends StatelessWidget {
   final double borderRadius;

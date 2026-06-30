@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:skai_data_mobile/core/theme/app_colors.dart';
+import 'package:skai_widgetbook/core/theme/app_colors.dart';
 
 enum ButtonSize { sm, m, lg, icon }
 
