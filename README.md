@@ -54,4 +54,4 @@ The workflow in `.github/workflows/pages.yml` builds the web catalog with:
 flutter build web --release --base-href /skai-widgetbook/
 ```
 
-Push to `main`, then enable Pages from GitHub Actions in repository settings if it is not enabled yet.
+It publishes `build/web` to the `gh-pages` branch. In repository settings, set Pages source to `Deploy from a branch`, branch `gh-pages`, folder `/root`.
