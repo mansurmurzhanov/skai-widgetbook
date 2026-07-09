@@ -27,6 +27,8 @@ flutter test
 flutter build web --release
 ```
 
+The GitHub Pages workflow runs `flutter test --exclude-tags golden` because pixel goldens are platform-sensitive between macOS and Linux runners.
+
 Regenerate goldens after intentional visual changes:
 
 ```sh

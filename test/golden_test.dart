@@ -24,7 +24,7 @@ void main() {
       find.byType(_GoldenHost),
       matchesGoldenFile('goldens/app_button.png'),
     );
-  });
+  }, tags: ['golden']);
 
   testWidgets('AppCard golden', (tester) async {
     const content = Column(
@@ -47,7 +47,7 @@ void main() {
       find.byType(_GoldenHost),
       matchesGoldenFile('goldens/app_card.png'),
     );
-  });
+  }, tags: ['golden']);
 
   testWidgets('AppGlassCard golden', (tester) async {
     const child = Text('Glass card');
@@ -62,7 +62,7 @@ void main() {
       find.byType(_GoldenHost),
       matchesGoldenFile('goldens/app_glass_card.png'),
     );
-  });
+  }, tags: ['golden']);
 
   testWidgets('AppSwitcher golden', (tester) async {
     await _pumpGolden(
@@ -81,7 +81,7 @@ void main() {
       find.byType(_GoldenHost),
       matchesGoldenFile('goldens/app_switcher.png'),
     );
-  });
+  }, tags: ['golden']);
 
   testWidgets('AppRadialProgressChart golden', (tester) async {
     await _pumpGolden(
@@ -104,7 +104,7 @@ void main() {
       find.byType(_GoldenHost),
       matchesGoldenFile('goldens/app_radial_progress_chart.png'),
     );
-  });
+  }, tags: ['golden']);
 }
 
 Future<void> _pumpGolden(
