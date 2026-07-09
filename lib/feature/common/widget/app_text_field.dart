@@ -268,7 +268,7 @@ class AppTextField extends StatelessWidget {
       maxLength: maxLength,
       maxLines: maxLines,
       enabled: enabled,
-      minLines: 5,
+      minLines: maxLines,
       isDense: isDense,
       filled: filled,
       fillColor: fillColor,

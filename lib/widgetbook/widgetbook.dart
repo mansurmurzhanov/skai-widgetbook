@@ -15,11 +15,14 @@ import 'app_switcher/app_switcher_use_case.dart';
 import 'app_text_field/app_text_field_use_case.dart';
 
 class SkaiWidgetbook extends StatelessWidget {
-  const SkaiWidgetbook({super.key});
+  const SkaiWidgetbook({super.key, this.initialRoute = '/'});
+
+  final String initialRoute;
 
   @override
   Widget build(BuildContext context) {
     return Widgetbook.material(
+      initialRoute: initialRoute,
       directories: [
         WidgetbookCategory(
           name: 'Skai UI Kit',

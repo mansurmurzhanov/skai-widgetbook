@@ -13,13 +13,13 @@ final appButtonComponent = WidgetbookComponent(
           label: 'Text',
           initialValue: 'Continue',
         );
-        final type = context.knobs.object.segmented(
+        final type = context.knobs.object.dropdown(
           label: 'Type',
           options: ButtonType.values,
           initialOption: ButtonType.primary,
           labelBuilder: (value) => value.name,
         );
-        final size = context.knobs.object.segmented(
+        final size = context.knobs.object.dropdown(
           label: 'Size',
           options: ButtonSize.values,
           initialOption: ButtonSize.m,
