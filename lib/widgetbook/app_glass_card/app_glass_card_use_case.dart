@@ -8,17 +8,38 @@ final appGlassCardComponent = WidgetbookComponent(
   useCases: [
     WidgetbookUseCase(
       name: 'Default',
-      builder: (context) => const Center(
-        child: SizedBox(
-          width: 320,
-          child: AppGlassCard(
-            child: Padding(
-              padding: EdgeInsets.all(16),
-              child: Text('Default Glass Card'),
+      builder: (context) {
+        final title = context.knobs.string(
+          label: 'Title',
+          initialValue: 'Default Glass Card',
+        );
+        final blur = context.knobs.double.slider(
+          label: 'Blur',
+          initialValue: 24,
+          min: 0,
+          max: 40,
+          divisions: 20,
+        );
+        final topHighlight = context.knobs.boolean(
+          label: 'Top highlight',
+          initialValue: true,
+        );
+
+        return Center(
+          child: SizedBox(
+            width: 320,
+            child: AppGlassCard(
+              sigmaXBlur: blur,
+              sigmaYBlur: blur,
+              showTopHighlight: topHighlight,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(title),
+              ),
             ),
           ),
-        ),
-      ),
+        );
+      },
     ),
     WidgetbookUseCase(
       name: 'Clickable',

@@ -8,12 +8,35 @@ final appButtonComponent = WidgetbookComponent(
   useCases: [
     WidgetbookUseCase(
       name: 'Default',
-      builder: (context) => Center(
-        child: AppButton(
-          child: const Text('Continue'),
-          onPressed: () {},
-        ),
-      ),
+      builder: (context) {
+        final label = context.knobs.string(
+          label: 'Text',
+          initialValue: 'Continue',
+        );
+        final type = context.knobs.object.segmented(
+          label: 'Type',
+          options: ButtonType.values,
+          initialOption: ButtonType.primary,
+          labelBuilder: (value) => value.name,
+        );
+        final size = context.knobs.object.segmented(
+          label: 'Size',
+          options: ButtonSize.values,
+          initialOption: ButtonSize.m,
+          labelBuilder: (value) => value.name,
+        );
+        final loading = context.knobs.boolean(label: 'Loading');
+
+        return Center(
+          child: AppButton(
+            type: type,
+            size: size,
+            isLoading: loading,
+            onPressed: () {},
+            child: Text(label),
+          ),
+        );
+      },
     ),
     WidgetbookUseCase(
       name: 'Disabled',
@@ -34,12 +57,18 @@ final appButtonComponent = WidgetbookComponent(
       ),
     ),
     WidgetbookUseCase(
-      name: 'Outline',
+      name: 'Long Text',
       builder: (context) => Center(
-        child: AppButton(
-          type: ButtonType.outline,
-          child: const Text('Continue'),
-          onPressed: () {},
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 300),
+          child: AppButton(
+            type: ButtonType.secondary,
+            child: const Text(
+              'Continue with the selected analytics report and notify team',
+              textAlign: TextAlign.center,
+            ),
+            onPressed: () {},
+          ),
         ),
       ),
     ),

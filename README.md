@@ -1,17 +1,55 @@
-# skai_widgetbook
+# Skai Widgetbook
 
-A new Flutter project.
+Live UI-kit catalog for Skai Flutter components.
 
-## Getting Started
+GitHub Pages: https://mansurmurzhanov.github.io/skai-widgetbook/
 
-This project is a starting point for a Flutter application.
+## What's Included
 
-A few resources to get you started if this is your first Flutter project:
+- Widgetbook catalog with Light/Dark theme switching via `AppTheme.light` and `AppTheme.dark`.
+- 11 components: `AppButton`, `AppCard`, `AppGlassCard`, `AppTextField`, `AppPasswordField`, `AppDateRangePicker`, `AppConfirmCard`, `AppErrorWidget`, `AppLoading`, `AppSwitcher`, `AppRadialProgressChart`.
+- Multiple states per component: default, disabled, loading, error, destructive, bounded ranges, long text, and custom variants.
+- Knobs for key parameters on buttons, cards, glass cards, fields, errors, loading color, switchers, charts, confirmations, and date ranges.
+- Golden tests for 5 stable components in light and dark themes.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Run Locally
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+flutter pub get
+flutter run -d chrome
+```
+
+Useful checks:
+
+```sh
+flutter analyze
+flutter test
+flutter build web --release
+```
+
+Regenerate goldens after intentional visual changes:
+
+```sh
+flutter test --update-goldens
+```
+
+Golden snapshots live in `test/goldens/`.
+
+## Add A Component
+
+1. Add or adapt the component under `lib/feature/common/widget/`.
+2. Create `lib/widgetbook/<component_name>/<component_name>_use_case.dart`.
+3. Export a `WidgetbookComponent` with at least two `WidgetbookUseCase`s.
+4. Add knobs with `context.knobs.*` for the parameters people need to inspect.
+5. Register the component in `lib/widgetbook/widgetbook.dart`.
+6. Add a golden test in `test/golden_test.dart` when the component is visually stable.
+
+## GitHub Pages
+
+The workflow in `.github/workflows/pages.yml` builds the web catalog with:
+
+```sh
+flutter build web --release --base-href /skai-widgetbook/
+```
+
+Push to `main`, then enable Pages from GitHub Actions in repository settings if it is not enabled yet.
